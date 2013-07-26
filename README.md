@@ -4,6 +4,13 @@ geojl
 A wrapper for making API requests to some geocoding APIs.
 I'm modeling it on Python's [geopy](https://github.com/geopy/geopy).
 
+This is just enough to let me write [Distance Between Two Cities](https://github.com/astrieanna/Projects/blob/master/Numbers/distance.jl).
+If this is useful to others, I'm happy to improve/expand it and/or make it a real Julia package.
+
+Currently, if you want to use it you should:
+
+    julia>Pkg2.clone("https://github.com/astrieanna/geojl")
+
 ## Example of MapQuest:
 
     julia> using geojl
