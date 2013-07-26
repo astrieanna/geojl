@@ -24,7 +24,8 @@ I'm modeling it on Python's [geopy](https://github.com/geopy/geopy).
     julia> GeoCoderUs.geocode("Pennsylvania Ave, Washington DC")
     "2: couldn't find this address! sorry"
 
-    julia> GeoCoderUs.geocode("1600 Pennsylvania Ave, Washington DC")"38.898748,-77.037684,1600 Pennsylvania Ave NW,Washington,DC,20502\n"
+    julia> GeoCoderUs.geocode("1600 Pennsylvania Ave, Washington DC")
+    "38.898748,-77.037684,1600 Pennsylvania Ave NW,Washington,DC,20502\n"
 
     julia> GeoCoderUs.simple_geocode("1600 Pennsylvania Ave, Washington DC")
     SimpleLocation("1600 Pennsylvania Ave NW,Washington,DC,20502",38.898748,-77.037684)
