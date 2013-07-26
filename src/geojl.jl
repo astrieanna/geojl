@@ -1,4 +1,6 @@
 module geojl 
+  #include("geocommon.jl")
   include("mapquest.jl")
-  export MapQuest
+  include("geocoderus.jl")
+  export MapQuest, GeoCoderUs
 end

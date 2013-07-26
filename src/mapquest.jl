@@ -1,4 +1,5 @@
 module MapQuest
+  include("geocommon.jl")
   using HTTPClient.HTTPC
   using JSON
 
@@ -16,12 +17,6 @@ module MapQuest
     return json
   end
 
-  type SimpleLocation
-    name::String
-    latitude::Float64
-    longitude::Float64
-  end
-
   function simple_geocode(mq::MapQuestClient, location::String)
     result = geocode(mq,location)
     country = result["results"][1]["locations"][1]["adminArea1"]
@@ -30,7 +25,7 @@ module MapQuest
     city    = result["results"][1]["locations"][1]["adminArea5"]
     lat     = result["results"][1]["locations"][1]["latLng"]["lat"]
     lng     = result["results"][1]["locations"][1]["latLng"]["lng"]
-    SimpleLocation("$city, $county, $state, $country",lat,lng)
+    GeoCommon.SimpleLocation("$city, $county, $state, $country",lat,lng)
   end
 
 end
